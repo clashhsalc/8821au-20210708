@@ -8,14 +8,12 @@
 - sudo apt-get install rsync
 - sudo apt-get install git
 - sudo apt update
+--
 
-
-
-
-
+- git clone https://github.com/clashhsalc/8821au-20210708.git
 - cd 8821au-20210708
 
-
+--
 - VER=$(sed -n 's/\PACKAGE_VERSION="\(.*\)"/\1/p' dkms.conf)
 - sudo rsync -rvhP ./ /usr/src/rtl88x2bu-${VER}
 - sudo dkms add -m rtl88x2bu -v ${VER}
